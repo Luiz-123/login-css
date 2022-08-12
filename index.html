@@ -1,0 +1,57 @@
+<?php
+    $imagem_hd = array("","./img/background-hd/01.jpg", "./img/background-hd/02.jpg", "./img/background-hd/03.jpg", "./img/background-hd/04.jpg", "./img/background-hd/05.jpg");
+    $imagem_sd = array("","./img/background-sd/01.jpg", "./img/background-sd/02.jpg", "./img/background-sd/03.jpg", "./img/background-sd/04.jpg", "./img/background-sd/05.jpg");
+
+    $contador = count($imagem_hd) -1;
+    $aleatorio = rand(1,$contador); 
+?>
+
+<style>
+    .background-change {
+        background-image: url("<?php echo $imagem_hd[$aleatorio]; ?>");
+    }
+
+    @media screen and (max-width: 580px) {
+        .background-change {
+            background-image: url("<?php echo $imagem_sd[$aleatorio]; ?>");
+        }
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">    
+</head>
+<body class="background-change">
+    <div class="container-background">
+        <div id="login-container">
+        <h1>Login</h1> 
+        <form action="">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="Digite o seu e-mail" autocomplete="off">
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password" placeholder="Digite a sua senha">
+            <a href="#" id="forgot-pass">Esqueceu a senha?</a>
+            <input type="submit" value="Login">
+            </form>    
+            
+            <div id="social-container">
+                <p>Ou entre pelas suas redes sociais</p>
+                <i class="fa fa-facebook-f"></i>
+                <i class="fa fa-linkedin"></i>
+            </div>
+            <div id="register-container">
+                <p>Ainda não tem uma conta?</p>
+                <a href="#">Registrar</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
