@@ -10,8 +10,9 @@
     text-decoration: none;
 }
 
-body{    
-    /*background-image: url('../img/background.jpg');*/
+body{
+    
+    background-image: url('../img/background.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;   
     /* e agora a regra de ouro que fará a imagem ocupar todo o viewport */
@@ -115,13 +116,13 @@ input[type="submit"]{
     border-radius: 20px;
     margin-top: 30px;
     color: #fff;
-    background-color: #FFA500;
+    background-color: #FFA50080;
     cursor: pointer;
     transition: .5s;
 }
 
 input[type="submit"]:hover{
-    background-color: #C71585;
+    background-color: #FFA50070; /*#C71585;*/
     transition: .5s;
     box-shadow: 0 2px 0 #fff;
     transform: translateY(2px);    
